@@ -1,0 +1,385 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Fri Aug 24 13:08:11 2018
+| Host         : DESKTOP-JL19ECK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Conv_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Conv_0_0 (xilinx.com:hls:Conv:1.0) from (Rev. 1808232039) to (Rev. 1808241304)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Thu Aug 23 22:16:59 2018
+| Host         : DESKTOP-JL19ECK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Pool_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Pool_0_0 (xilinx.com:hls:Pool:1.0) from (Rev. 1808232159) to (Rev. 1808232216)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Pool_0_0'.
+
+
+-Upgrade has removed interface 'm_axi_feature_in'
+
+-Upgrade has removed interface 'm_axi_feature_out'
+
+-Upgrade has added interface 'm_axi_gmem' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Pool_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'm_axi_feature_in_ARADDR'
+
+-Upgrade has removed port 'm_axi_feature_in_ARBURST'
+
+-Upgrade has removed port 'm_axi_feature_in_ARCACHE'
+
+-Upgrade has removed port 'm_axi_feature_in_ARLEN'
+
+-Upgrade has removed port 'm_axi_feature_in_ARLOCK'
+
+-Upgrade has removed port 'm_axi_feature_in_ARPROT'
+
+-Upgrade has removed port 'm_axi_feature_in_ARQOS'
+
+-Upgrade has removed port 'm_axi_feature_in_ARREADY'
+
+-Upgrade has removed port 'm_axi_feature_in_ARREGION'
+
+-Upgrade has removed port 'm_axi_feature_in_ARSIZE'
+
+-Upgrade has removed port 'm_axi_feature_in_ARVALID'
+
+-Upgrade has removed port 'm_axi_feature_in_AWADDR'
+
+-Upgrade has removed port 'm_axi_feature_in_AWBURST'
+
+-Upgrade has removed port 'm_axi_feature_in_AWCACHE'
+
+-Upgrade has removed port 'm_axi_feature_in_AWLEN'
+
+-Upgrade has removed port 'm_axi_feature_in_AWLOCK'
+
+-Upgrade has removed port 'm_axi_feature_in_AWPROT'
+
+-Upgrade has removed port 'm_axi_feature_in_AWQOS'
+
+-Upgrade has removed port 'm_axi_feature_in_AWREADY'
+
+-Upgrade has removed port 'm_axi_feature_in_AWREGION'
+
+-Upgrade has removed port 'm_axi_feature_in_AWSIZE'
+
+-Upgrade has removed port 'm_axi_feature_in_AWVALID'
+
+-Upgrade has removed port 'm_axi_feature_in_BREADY'
+
+-Upgrade has removed port 'm_axi_feature_in_BRESP'
+
+-Upgrade has removed port 'm_axi_feature_in_BVALID'
+
+-Upgrade has removed port 'm_axi_feature_in_RDATA'
+
+-Upgrade has removed port 'm_axi_feature_in_RLAST'
+
+-Upgrade has removed port 'm_axi_feature_in_RREADY'
+
+-Upgrade has removed port 'm_axi_feature_in_RRESP'
+
+-Upgrade has removed port 'm_axi_feature_in_RVALID'
+
+-Upgrade has removed port 'm_axi_feature_in_WDATA'
+
+-Upgrade has removed port 'm_axi_feature_in_WLAST'
+
+-Upgrade has removed port 'm_axi_feature_in_WREADY'
+
+-Upgrade has removed port 'm_axi_feature_in_WSTRB'
+
+-Upgrade has removed port 'm_axi_feature_in_WVALID'
+
+-Upgrade has removed port 'm_axi_feature_out_ARADDR'
+
+-Upgrade has removed port 'm_axi_feature_out_ARBURST'
+
+-Upgrade has removed port 'm_axi_feature_out_ARCACHE'
+
+-Upgrade has removed port 'm_axi_feature_out_ARLEN'
+
+-Upgrade has removed port 'm_axi_feature_out_ARLOCK'
+
+-Upgrade has removed port 'm_axi_feature_out_ARPROT'
+
+-Upgrade has removed port 'm_axi_feature_out_ARQOS'
+
+-Upgrade has removed port 'm_axi_feature_out_ARREADY'
+
+-Upgrade has removed port 'm_axi_feature_out_ARREGION'
+
+-Upgrade has removed port 'm_axi_feature_out_ARSIZE'
+
+-Upgrade has removed port 'm_axi_feature_out_ARVALID'
+
+-Upgrade has removed port 'm_axi_feature_out_AWADDR'
+
+-Upgrade has removed port 'm_axi_feature_out_AWBURST'
+
+-Upgrade has removed port 'm_axi_feature_out_AWCACHE'
+
+-Upgrade has removed port 'm_axi_feature_out_AWLEN'
+
+-Upgrade has removed port 'm_axi_feature_out_AWLOCK'
+
+-Upgrade has removed port 'm_axi_feature_out_AWPROT'
+
+-Upgrade has removed port 'm_axi_feature_out_AWQOS'
+
+-Upgrade has removed port 'm_axi_feature_out_AWREADY'
+
+-Upgrade has removed port 'm_axi_feature_out_AWREGION'
+
+-Upgrade has removed port 'm_axi_feature_out_AWSIZE'
+
+-Upgrade has removed port 'm_axi_feature_out_AWVALID'
+
+-Upgrade has removed port 'm_axi_feature_out_BREADY'
+
+-Upgrade has removed port 'm_axi_feature_out_BRESP'
+
+-Upgrade has removed port 'm_axi_feature_out_BVALID'
+
+-Upgrade has removed port 'm_axi_feature_out_RDATA'
+
+-Upgrade has removed port 'm_axi_feature_out_RLAST'
+
+-Upgrade has removed port 'm_axi_feature_out_RREADY'
+
+-Upgrade has removed port 'm_axi_feature_out_RRESP'
+
+-Upgrade has removed port 'm_axi_feature_out_RVALID'
+
+-Upgrade has removed port 'm_axi_feature_out_WDATA'
+
+-Upgrade has removed port 'm_axi_feature_out_WLAST'
+
+-Upgrade has removed port 'm_axi_feature_out_WREADY'
+
+-Upgrade has removed port 'm_axi_feature_out_WSTRB'
+
+-Upgrade has removed port 'm_axi_feature_out_WVALID'
+
+-Upgraded port 's_axi_AXILiteS_ARADDR' width 7 differs from original width 6
+
+-Upgraded port 's_axi_AXILiteS_AWADDR' width 7 differs from original width 6
+
+-Upgrade has added port 'm_axi_gmem_ARADDR'
+
+-Upgrade has added port 'm_axi_gmem_ARBURST'
+
+-Upgrade has added port 'm_axi_gmem_ARCACHE'
+
+-Upgrade has added port 'm_axi_gmem_ARLEN'
+
+-Upgrade has added port 'm_axi_gmem_ARLOCK'
+
+-Upgrade has added port 'm_axi_gmem_ARPROT'
+
+-Upgrade has added port 'm_axi_gmem_ARQOS'
+
+-Upgrade has added port 'm_axi_gmem_ARREADY'
+
+-Upgrade has added port 'm_axi_gmem_ARREGION'
+
+-Upgrade has added port 'm_axi_gmem_ARSIZE'
+
+-Upgrade has added port 'm_axi_gmem_ARVALID'
+
+-Upgrade has added port 'm_axi_gmem_AWADDR'
+
+-Upgrade has added port 'm_axi_gmem_AWBURST'
+
+-Upgrade has added port 'm_axi_gmem_AWCACHE'
+
+-Upgrade has added port 'm_axi_gmem_AWLEN'
+
+-Upgrade has added port 'm_axi_gmem_AWLOCK'
+
+-Upgrade has added port 'm_axi_gmem_AWPROT'
+
+-Upgrade has added port 'm_axi_gmem_AWQOS'
+
+-Upgrade has added port 'm_axi_gmem_AWREADY'
+
+-Upgrade has added port 'm_axi_gmem_AWREGION'
+
+-Upgrade has added port 'm_axi_gmem_AWSIZE'
+
+-Upgrade has added port 'm_axi_gmem_AWVALID'
+
+-Upgrade has added port 'm_axi_gmem_BREADY'
+
+-Upgrade has added port 'm_axi_gmem_BRESP'
+
+-Upgrade has added port 'm_axi_gmem_BVALID'
+
+-Upgrade has added port 'm_axi_gmem_RDATA'
+
+-Upgrade has added port 'm_axi_gmem_RLAST'
+
+-Upgrade has added port 'm_axi_gmem_RREADY'
+
+-Upgrade has added port 'm_axi_gmem_RRESP'
+
+-Upgrade has added port 'm_axi_gmem_RVALID'
+
+-Upgrade has added port 'm_axi_gmem_WDATA'
+
+-Upgrade has added port 'm_axi_gmem_WLAST'
+
+-Upgrade has added port 'm_axi_gmem_WREADY'
+
+-Upgrade has added port 'm_axi_gmem_WSTRB'
+
+-Upgrade has added port 'm_axi_gmem_WVALID'
+
+
+4. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_FEATURE_IN_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_FEATURE_IN_ID_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_IN_DATA_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_FEATURE_IN_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_FEATURE_IN_AWUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_IN_WUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_IN_BUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_IN_ARUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_IN_RUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_IN_USER_VALUE' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_FEATURE_IN_PROT_VALUE' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_FEATURE_IN_CACHE_VALUE' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '"0011"'
+
+Parameter 'C_M_AXI_FEATURE_IN_TARGET_ADDR' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_FEATURE_OUT_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_FEATURE_OUT_ID_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_OUT_DATA_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_FEATURE_OUT_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_FEATURE_OUT_AWUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_OUT_WUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_OUT_BUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_OUT_ARUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_OUT_RUSER_WIDTH' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_FEATURE_OUT_USER_VALUE' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_FEATURE_OUT_PROT_VALUE' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_FEATURE_OUT_CACHE_VALUE' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '"0011"'
+
+Parameter 'C_M_AXI_FEATURE_OUT_TARGET_ADDR' is no longer present on the upgraded IP 'design_1_Pool_0_0', and cannot be set to '0x00000000'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:Pool:1.0 -user_name design_1_Pool_0_0
+set_property -dict "\
+  CONFIG.Component_Name design_1_Pool_0_0 " [get_ips design_1_Pool_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Thu Aug 23 20:40:07 2018
+| Host         : DESKTOP-JL19ECK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Conv_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Conv_0_0 (xilinx.com:hls:Conv:1.0) from (Rev. 1808231654) to (Rev. 1808232039)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Thu Aug 23 16:54:59 2018
+| Host         : DESKTOP-JL19ECK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Conv_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Conv_0_0 (xilinx.com:hls:Conv:1.0) from (Rev. 1808231627) to (Rev. 1808231654)
+

@@ -1,0 +1,716 @@
+@I [HLS-0] Workspace E:/source/source/HLS/pool_core/solution1 opened at Wed Jun 16 10:31:31 +0800 2021
+@I [HLS-100] Execute     config_clock -quiet -name default -period 10 -default=false 
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-100] Command     config_clock returned 0; 0 sec.
+@I [HLS-100] Execute     open_platform DefaultPlatform 
+@I [HLS-100] Command     open_platform returned 0; 0 sec.
+@I [HLS-100] Execute     import_lib F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.lib 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/xilinx_interface.lib 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.lib 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.lib 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.lib 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.lib 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.006 sec.
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_old.lib 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_vivado.lib 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.hlp 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/target_info.tcl 
+@I [HLS-100] Command         ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.hlp 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.hlp 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.hlp 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/dsp48e1.hlp 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Execute       get_default_platform 
+@I [HLS-100] Command       get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+@I [HLS-100] Command       config_chip_info returned 0; 0 sec.
+@I [HLS-100] Execute       config_chip_info -quiet -speed medium 
+@I [HLS-100] Command       config_chip_info returned 0; 0 sec.
+@I [HLS-100] Command     import_lib returned 0; 0.018 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.004 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.007 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.011 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.004 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.079 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.117 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.118 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.119 sec.
+@I [HLS-100] Execute     open_platform DefaultPlatform 
+@I [HLS-100] Command     open_platform returned 0; 0 sec.
+@I [HLS-100] Execute     import_lib F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_hp.lib 
+@I [HLS-100] Command         ap_source returned 0; 0.002 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.hlp 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/target_info.tcl 
+@I [HLS-100] Command           ap_source returned 0; 0.156 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.hlp 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.hlp 
+@I [HLS-100] Command             ap_source returned 0; 0 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.hlp 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.159 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.159 sec.
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_hp.hlp 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     import_lib returned 0; 0.172 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     set_part xc7z010clg400-1 
+@I [HLS-100] Execute       add_library xilinx/zynq/zynq:xc7z010:clg400:-1 
+@I [HLS-100] Execute         get_default_platform 
+@I [HLS-100] Command         get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute         license_isbetapart xc7z010 
+@I [HLS-100] Command         license_isbetapart returned 1; 0.012 sec.
+@I [HLS-100] Execute         get_default_platform 
+@I [HLS-100] Command         get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute         config_chip_info -quiet -resource  {SLICE 4400}   {LUT 17600}     {FF 35200}  {DSP48E 80}    {BRAM 120}  
+@I [HLS-100] Command         config_chip_info returned 0; 0 sec.
+@I [HLS-100] Execute         config_chip_info -quiet -speed slow 
+@I [HLS-100] Command         config_chip_info returned 0; 0 sec.
+@I [HLS-100] Command       add_library returned 0; 0.02 sec.
+@I [HLS-100] Execute       add_library xilinx/zynq/zynq_fpv6 
+@I [HLS-100] Execute         get_default_platform 
+@I [HLS-100] Command         get_default_platform returned 0; 0 sec.
+@I [HLS-100] Command       add_library returned 0; 0.007 sec.
+@I [HLS-10] Setting target device to 'xc7z010clg400-1'
+@I [HLS-100] Command     set_part returned 0; 0.066 sec.
+@I [HLS-100] Execute     get_default_platform 
+@I [HLS-100] Command     get_default_platform returned 0; 0 sec.
+@I [HLS-100] Execute     config_chip_info -quiet -resource  {SLICE 4400}   {LUT 17600}     {FF 35200}  {DSP48E 80}    {BRAM 120}  
+@I [HLS-100] Command     config_chip_info returned 0; 0 sec.
+@I [HLS-100] Execute     config_chip_info -quiet -speed slow 
+@I [HLS-100] Command     config_chip_info returned 0; 0 sec.
+@I [HLS-100] Command   open_solution returned 0; 0.44 sec.
+@I [HLS-100] Execute   export_design -rtl verilog -format ip_catalog 
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.04 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.007 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.011 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.09 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.125 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.127 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.127 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.03 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.004 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.007 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.011 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.073 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.105 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.107 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.107 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.026 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.compgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.047 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.compgen.tcl 
+@I [HLS-100] Execute       source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute       source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute       source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute       source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute       source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.067 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.compgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.constraint.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.032 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.rtl_wrap.cfg.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.tbgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.constraint.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.constraint.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.constraint.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.004 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.006 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.011 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.072 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.109 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.111 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.111 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.002 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.041 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.007 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.072 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.108 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.109 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.109 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.002 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.026 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.004 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.006 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.009 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.074 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.107 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.109 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.109 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.002 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.compgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.065 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.constraint.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.006 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.009 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.074 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.106 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.107 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.107 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0 sec.
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.007 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.079 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.111 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.113 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.113 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.007 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.01 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.076 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.109 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.111 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.111 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.002 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.compgen.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.041 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/Pool.constraint.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/common.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/APCoreGen.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/op_simcore.gen 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/generic/autopilot/interface.gen 
+@I [HLS-100] Command     ap_source returned 0; 0 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/virtex.gen 
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx.gen 
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/plb46.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/fsl.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/axi4.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.002 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/nativeAXI4.gen 
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/saxilite.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute             source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/maxi.gen 
+@I [HLS-100] Command             ap_source returned 0; 0.006 sec.
+@I [HLS-100] Command           ap_source returned 0; 0.009 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.007 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.008 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/dds_compiler.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.003 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/util.gen 
+@I [HLS-100] Command           ap_source returned 0; 0 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfft.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.076 sec.
+@I [HLS-100] Execute           source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/ip/xfir.gen 
+@I [HLS-100] Command           ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command         ap_source returned 0; 0.108 sec.
+@I [HLS-100] Execute         source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/dsp48.gen 
+@I [HLS-100] Command         ap_source returned 0; 0 sec.
+@I [HLS-100] Command       ap_source returned 0; 0.11 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.11 sec.
+@I [HLS-100] Execute     source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+@I [HLS-100] Execute       source F:/vivado/Vivado_HLS/2016.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+@I [HLS-100] Command       ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Execute     source E:/source/source/HLS/pool_core/solution1/.autopilot/db/global.setting.tcl 
+@I [HLS-100] Command     ap_source returned 0; 0.001 sec.
+@I [HLS-100] Command   export_design returned 0; 67.475 sec.
+@I [HLS-100] Command ap_source returned 0; 67.928 sec.
+@I [HLS-100] Execute cleanup_all 
+@I [HLS-100] Command cleanup_all returned 0; 0 sec.

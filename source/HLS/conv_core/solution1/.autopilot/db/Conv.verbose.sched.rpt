@@ -1,0 +1,1702 @@
+
+
+================================================================
+== Vivado HLS Report for 'Conv'
+================================================================
+* Date:           Wed Jun 16 10:03:37 2021
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        conv_core
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   24|    ?|   25|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+-----+------------------+----------------------+-----------+-----------+-----------+----------+
+        |                             |         Latency        |       Iteration      |  Initiation Interval  |    Trip   |          |
+        |          Loop Name          | min |        max       |        Latency       |  achieved |   target  |   Count   | Pipelined|
+        +-----------------------------+-----+------------------+----------------------+-----------+-----------+-----------+----------+
+        |- Loop 1                     |    0|                 ?|         2 ~ ?        |          -|          -| 0 ~ 65535 |    no    |
+        | + Loop 1.1                  |    0|                 ?| 2 ~ 5864731839422462 |          -|          -| 0 ~ 65535 |    no    |
+        |  ++ Loop 1.1.1              |    0|  5864731839422460|   21 ~ 89490071556   |          -|          -| 0 ~ 65535 |    no    |
+        |   +++ Loop 1.1.1.1          |    0|       89490071535|     2 ~ 350941457    |          -|          -|  0 ~ 255  |    no    |
+        |    ++++ Loop 1.1.1.1.1      |    0|         350941455|      2 ~ 1376241     |          -|          -|  0 ~ 255  |    no    |
+        |     +++++ Loop 1.1.1.1.1.1  |    0|           1376235|                    21|          -|          -| 0 ~ 65535 |    no    |
+        +-----------------------------+-----+------------------+----------------------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 73
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / (!exitcond5)
+26 --> 
+	27  / (!exitcond1)
+	25  / (exitcond1)
+27 --> 
+	28  / (!exitcond)
+	26  / (exitcond)
+28 --> 
+	55  / (exitcond2)
+	29  / (!exitcond2)
+29 --> 
+	54  / (!exitcond3 & brmerge) | (!exitcond3 & !tmp_31)
+	30  / (!exitcond3 & !brmerge & tmp_31)
+	28  / (exitcond3)
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / (!exitcond4)
+	54  / (exitcond4)
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	33  / true
+54 --> 
+	29  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	27  / true
+* FSM state operations: 
+
+ <State 1>: 7.77ns
+ST_1: feature_out_read (16)  [1/1] 1.00ns
+_ifconv:0  %feature_out_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %feature_out)
+
+ST_1: bias_read (17)  [1/1] 1.00ns
+_ifconv:1  %bias_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %bias)
+
+ST_1: W_read (18)  [1/1] 1.00ns
+_ifconv:2  %W_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %W)
+
+ST_1: feature_in_read (19)  [1/1] 1.00ns
+_ifconv:3  %feature_in_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %feature_in)
+
+ST_1: relu_en_V_read (20)  [1/1] 1.00ns
+_ifconv:4  %relu_en_V_read = call i1 @_ssdm_op_Read.s_axilite.i1(i1 %relu_en_V)
+
+ST_1: mode_V_read (21)  [1/1] 1.00ns
+_ifconv:5  %mode_V_read = call i1 @_ssdm_op_Read.s_axilite.i1(i1 %mode_V)
+
+ST_1: Sy_V_read (22)  [1/1] 1.00ns
+_ifconv:6  %Sy_V_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %Sy_V)
+
+ST_1: Sx_V_read (23)  [1/1] 1.00ns
+_ifconv:7  %Sx_V_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %Sx_V)
+
+ST_1: Ky_V_read (24)  [1/1] 1.00ns
+_ifconv:8  %Ky_V_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %Ky_V)
+
+ST_1: Kx_V_read (25)  [1/1] 1.00ns
+_ifconv:9  %Kx_V_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %Kx_V)
+
+ST_1: CHout_V_read (26)  [1/1] 1.00ns
+_ifconv:10  %CHout_V_read = call i16 @_ssdm_op_Read.s_axilite.i16(i16 %CHout_V)
+
+ST_1: Win_V_read (27)  [1/1] 1.00ns
+_ifconv:11  %Win_V_read = call i16 @_ssdm_op_Read.s_axilite.i16(i16 %Win_V)
+
+ST_1: Hin_V_read (28)  [1/1] 1.00ns
+_ifconv:12  %Hin_V_read = call i16 @_ssdm_op_Read.s_axilite.i16(i16 %Hin_V)
+
+ST_1: CHin_V_read (29)  [1/1] 1.00ns
+_ifconv:13  %CHin_V_read = call i16 @_ssdm_op_Read.s_axilite.i16(i16 %CHin_V)
+
+ST_1: feature_out7 (30)  [1/1] 0.00ns
+_ifconv:14  %feature_out7 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %feature_out_read, i32 2, i32 31)
+
+ST_1: tmp_1 (32)  [1/1] 0.00ns
+_ifconv:16  %tmp_1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %bias_read, i32 2, i32 31)
+
+ST_1: W3 (34)  [1/1] 0.00ns
+_ifconv:18  %W3 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %W_read, i32 2, i32 31)
+
+ST_1: feature_in1 (36)  [1/1] 0.00ns
+_ifconv:20  %feature_in1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %feature_in_read, i32 2, i32 31)
+
+ST_1: tmp_2_cast (66)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35
+_ifconv:50  %tmp_2_cast = zext i8 %Kx_V_read to i9
+
+ST_1: r_V_tr (67)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:35
+_ifconv:51  %r_V_tr = add i9 -1, %tmp_2_cast
+
+ST_1: tmp_10 (68)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35 (grouped into LUT with out node p_1)
+_ifconv:52  %tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %r_V_tr, i32 8)
+
+ST_1: p_neg9 (69)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:35
+_ifconv:53  %p_neg9 = sub i9 1, %tmp_2_cast
+
+ST_1: tmp_3 (70)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35
+_ifconv:54  %tmp_3 = call i8 @_ssdm_op_PartSelect.i8.i9.i32.i32(i9 %p_neg9, i32 1, i32 8)
+
+ST_1: tmp_11 (71)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35 (grouped into LUT with out node p_1)
+_ifconv:55  %tmp_11 = call i8 @_ssdm_op_PartSelect.i8.i9.i32.i32(i9 %r_V_tr, i32 1, i32 8)
+
+ST_1: tmp_6 (72)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:35
+_ifconv:56  %tmp_6 = sub i8 0, %tmp_3
+
+ST_1: pad_x_V (73)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35 (grouped into LUT with out node p_1)
+_ifconv:57  %pad_x_V = select i1 %tmp_10, i8 %tmp_6, i8 %tmp_11
+
+ST_1: tmp_24_cast (74)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35
+_ifconv:58  %tmp_24_cast = zext i8 %Ky_V_read to i9
+
+ST_1: r_V_1_tr (75)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:35
+_ifconv:59  %r_V_1_tr = add i9 -1, %tmp_24_cast
+
+ST_1: tmp_13 (76)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35 (grouped into LUT with out node p_2)
+_ifconv:60  %tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %r_V_1_tr, i32 8)
+
+ST_1: p_neg (77)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:35
+_ifconv:61  %p_neg = sub i9 1, %tmp_24_cast
+
+ST_1: tmp_15 (78)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35
+_ifconv:62  %tmp_15 = call i8 @_ssdm_op_PartSelect.i8.i9.i32.i32(i9 %p_neg, i32 1, i32 8)
+
+ST_1: tmp_17 (79)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35 (grouped into LUT with out node p_2)
+_ifconv:63  %tmp_17 = call i8 @_ssdm_op_PartSelect.i8.i9.i32.i32(i9 %r_V_1_tr, i32 1, i32 8)
+
+ST_1: tmp_19 (80)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:35
+_ifconv:64  %tmp_19 = sub i8 0, %tmp_15
+
+ST_1: pad_y_V (81)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:35 (grouped into LUT with out node p_2)
+_ifconv:65  %pad_y_V = select i1 %tmp_13, i8 %tmp_19, i8 %tmp_17
+
+ST_1: p_1 (82)  [1/1] 1.37ns  loc: conv_core/conv_core.cpp:35 (out node of the LUT)
+_ifconv:66  %p_1 = select i1 %mode_V_read, i8 %pad_x_V, i8 0
+
+ST_1: p_2 (83)  [1/1] 1.37ns  loc: conv_core/conv_core.cpp:35 (out node of the LUT)
+_ifconv:67  %p_2 = select i1 %mode_V_read, i8 %pad_y_V, i8 0
+
+ST_1: r_V_2 (84)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:68  %r_V_2 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %p_1, i1 false)
+
+ST_1: r_V_2_cast (85)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:69  %r_V_2_cast = zext i9 %r_V_2 to i17
+
+ST_1: lhs_V_2_cast (86)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:70  %lhs_V_2_cast = zext i16 %Win_V_read to i17
+
+ST_1: r_V_3 (87)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:38
+_ifconv:71  %r_V_3 = add i17 %lhs_V_2_cast, %r_V_2_cast
+
+ST_1: r_V_6 (96)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:80  %r_V_6 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %p_2, i1 false)
+
+ST_1: r_V_6_cast (97)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:81  %r_V_6_cast = zext i9 %r_V_6 to i17
+
+ST_1: lhs_V_4_cast (98)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:82  %lhs_V_4_cast = zext i16 %Hin_V_read to i17
+
+ST_1: r_V_7 (99)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:39
+_ifconv:83  %r_V_7 = add i17 %lhs_V_4_cast, %r_V_6_cast
+
+
+ <State 2>: 6.88ns
+ST_2: r_V_3_cast (88)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:72  %r_V_3_cast = zext i17 %r_V_3 to i18
+
+ST_2: rhs_V_2_cast (89)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:73  %rhs_V_2_cast = zext i8 %Kx_V_read to i18
+
+ST_2: r_V_4 (90)  [1/1] 2.08ns  loc: conv_core/conv_core.cpp:38
+_ifconv:74  %r_V_4 = sub i18 %r_V_3_cast, %rhs_V_2_cast
+
+ST_2: r_V_4_cast (91)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:75  %r_V_4_cast = sext i18 %r_V_4 to i19
+
+ST_2: tmp_tr (92)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:76  %tmp_tr = zext i8 %Sx_V_read to i19
+
+ST_2: tmp_21 (93)  [23/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_2: r_V_7_cast (100)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:84  %r_V_7_cast = zext i17 %r_V_7 to i18
+
+ST_2: rhs_V_5_cast (101)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:85  %rhs_V_5_cast = zext i8 %Ky_V_read to i18
+
+ST_2: r_V_8 (102)  [1/1] 2.08ns  loc: conv_core/conv_core.cpp:39
+_ifconv:86  %r_V_8 = sub i18 %r_V_7_cast, %rhs_V_5_cast
+
+ST_2: r_V_8_cast (103)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:87  %r_V_8_cast = sext i18 %r_V_8 to i19
+
+ST_2: tmp_2_tr (104)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:88  %tmp_2_tr = zext i8 %Sy_V_read to i19
+
+ST_2: tmp_24 (105)  [23/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 3>: 4.80ns
+ST_3: tmp_21 (93)  [22/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_3: tmp_24 (105)  [22/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 4>: 4.80ns
+ST_4: tmp_21 (93)  [21/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_4: tmp_24 (105)  [21/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 5>: 4.80ns
+ST_5: tmp_21 (93)  [20/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_5: tmp_24 (105)  [20/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 6>: 4.80ns
+ST_6: tmp_21 (93)  [19/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_6: tmp_24 (105)  [19/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 7>: 4.80ns
+ST_7: tmp_21 (93)  [18/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_7: tmp_24 (105)  [18/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 8>: 4.80ns
+ST_8: tmp_21 (93)  [17/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_8: tmp_24 (105)  [17/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 9>: 4.80ns
+ST_9: tmp_21 (93)  [16/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_9: tmp_24 (105)  [16/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 10>: 4.80ns
+ST_10: tmp_21 (93)  [15/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_10: tmp_24 (105)  [15/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 11>: 4.80ns
+ST_11: tmp_21 (93)  [14/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_11: tmp_24 (105)  [14/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 12>: 4.80ns
+ST_12: tmp_21 (93)  [13/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_12: tmp_24 (105)  [13/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 13>: 4.80ns
+ST_13: tmp_21 (93)  [12/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_13: tmp_24 (105)  [12/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 14>: 4.80ns
+ST_14: tmp_21 (93)  [11/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_14: tmp_24 (105)  [11/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 15>: 4.80ns
+ST_15: tmp_21 (93)  [10/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_15: tmp_24 (105)  [10/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 16>: 4.80ns
+ST_16: tmp_21 (93)  [9/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_16: tmp_24 (105)  [9/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 17>: 4.80ns
+ST_17: tmp_21 (93)  [8/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_17: tmp_24 (105)  [8/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 18>: 4.80ns
+ST_18: tmp_21 (93)  [7/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_18: tmp_24 (105)  [7/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 19>: 4.80ns
+ST_19: tmp_21 (93)  [6/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_19: tmp_24 (105)  [6/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 20>: 4.80ns
+ST_20: tmp_21 (93)  [5/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_20: tmp_24 (105)  [5/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 21>: 4.80ns
+ST_21: tmp_21 (93)  [4/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_21: tmp_24 (105)  [4/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 22>: 4.80ns
+ST_22: tmp_21 (93)  [3/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_22: tmp_24 (105)  [3/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 23>: 4.80ns
+ST_23: tmp_21 (93)  [2/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_23: tmp_24 (105)  [2/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+
+ <State 24>: 6.76ns
+ST_24: tmp_2 (31)  [1/1] 0.00ns
+_ifconv:15  %tmp_2 = zext i30 %feature_out7 to i32
+
+ST_24: tmp_10_cast (33)  [1/1] 0.00ns
+_ifconv:17  %tmp_10_cast = zext i30 %tmp_1 to i31
+
+ST_24: tmp_5 (35)  [1/1] 0.00ns
+_ifconv:19  %tmp_5 = zext i30 %W3 to i32
+
+ST_24: tmp_8 (37)  [1/1] 0.00ns
+_ifconv:21  %tmp_8 = zext i30 %feature_in1 to i32
+
+ST_24: StgValue_176 (38)  [1/1] 0.00ns
+_ifconv:22  call void (...)* @_ssdm_op_SpecBitsMap(float* %gmem), !map !150
+
+ST_24: StgValue_177 (39)  [1/1] 0.00ns
+_ifconv:23  call void (...)* @_ssdm_op_SpecBitsMap(i16 %CHin_V), !map !157
+
+ST_24: StgValue_178 (40)  [1/1] 0.00ns
+_ifconv:24  call void (...)* @_ssdm_op_SpecBitsMap(i16 %Hin_V), !map !163
+
+ST_24: StgValue_179 (41)  [1/1] 0.00ns
+_ifconv:25  call void (...)* @_ssdm_op_SpecBitsMap(i16 %Win_V), !map !167
+
+ST_24: StgValue_180 (42)  [1/1] 0.00ns
+_ifconv:26  call void (...)* @_ssdm_op_SpecBitsMap(i16 %CHout_V), !map !171
+
+ST_24: StgValue_181 (43)  [1/1] 0.00ns
+_ifconv:27  call void (...)* @_ssdm_op_SpecBitsMap(i8 %Kx_V), !map !175
+
+ST_24: StgValue_182 (44)  [1/1] 0.00ns
+_ifconv:28  call void (...)* @_ssdm_op_SpecBitsMap(i8 %Ky_V), !map !179
+
+ST_24: StgValue_183 (45)  [1/1] 0.00ns
+_ifconv:29  call void (...)* @_ssdm_op_SpecBitsMap(i8 %Sx_V), !map !183
+
+ST_24: StgValue_184 (46)  [1/1] 0.00ns
+_ifconv:30  call void (...)* @_ssdm_op_SpecBitsMap(i8 %Sy_V), !map !187
+
+ST_24: StgValue_185 (47)  [1/1] 0.00ns
+_ifconv:31  call void (...)* @_ssdm_op_SpecBitsMap(i1 %mode_V), !map !191
+
+ST_24: StgValue_186 (48)  [1/1] 0.00ns
+_ifconv:32  call void (...)* @_ssdm_op_SpecBitsMap(i1 %relu_en_V), !map !195
+
+ST_24: StgValue_187 (49)  [1/1] 0.00ns
+_ifconv:33  call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @Conv_str) nounwind
+
+ST_24: StgValue_188 (50)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:12
+_ifconv:34  call void (...)* @_ssdm_op_SpecInterface(i32 %feature_out, [10 x i8]* @mode5, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i64 4294967295, [1 x i8]* @bundle6, [6 x i8]* @p_str2, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_189 (51)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:13
+_ifconv:35  call void (...)* @_ssdm_op_SpecInterface(i32 %bias, [10 x i8]* @mode3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i64 4294967295, [1 x i8]* @bundle4, [6 x i8]* @p_str2, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_190 (52)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:14
+_ifconv:36  call void (...)* @_ssdm_op_SpecInterface(i32 %W, [10 x i8]* @mode1, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i64 4294967295, [1 x i8]* @bundle2, [6 x i8]* @p_str2, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_191 (53)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:15
+_ifconv:37  call void (...)* @_ssdm_op_SpecInterface(float* %gmem, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i64 4294967295, [1 x i8]* @p_str1, [6 x i8]* @p_str2, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_192 (54)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:15
+_ifconv:38  call void (...)* @_ssdm_op_SpecInterface(i32 %feature_in, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i64 4294967295, [1 x i8]* @bundle, [6 x i8]* @p_str2, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_193 (55)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:16
+_ifconv:39  call void (...)* @_ssdm_op_SpecInterface(i1 %relu_en_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_194 (56)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:17
+_ifconv:40  call void (...)* @_ssdm_op_SpecInterface(i16 %CHout_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_195 (57)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:18
+_ifconv:41  call void (...)* @_ssdm_op_SpecInterface(i8 %Sx_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_196 (58)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:19
+_ifconv:42  call void (...)* @_ssdm_op_SpecInterface(i16 %Hin_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_197 (59)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:20
+_ifconv:43  call void (...)* @_ssdm_op_SpecInterface(i16 %CHin_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_198 (60)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:21
+_ifconv:44  call void (...)* @_ssdm_op_SpecInterface(i8 %Kx_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_199 (61)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:22
+_ifconv:45  call void (...)* @_ssdm_op_SpecInterface(i1 %mode_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_200 (62)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:23
+_ifconv:46  call void (...)* @_ssdm_op_SpecInterface(i8 %Sy_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_201 (63)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:24
+_ifconv:47  call void (...)* @_ssdm_op_SpecInterface(i8 %Ky_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_202 (64)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:25
+_ifconv:48  call void (...)* @_ssdm_op_SpecInterface(i16 %Win_V, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: StgValue_203 (65)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:26
+_ifconv:49  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_24: tmp_21 (93)  [1/23] 4.80ns  loc: conv_core/conv_core.cpp:38
+_ifconv:77  %tmp_21 = sdiv i19 %r_V_4_cast, %tmp_tr
+
+ST_24: tmp_22 (94)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:78  %tmp_22 = trunc i19 %tmp_21 to i16
+
+ST_24: Wout_V (95)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:38
+_ifconv:79  %Wout_V = add i16 1, %tmp_22
+
+ST_24: tmp_24 (105)  [1/23] 4.80ns  loc: conv_core/conv_core.cpp:39
+_ifconv:89  %tmp_24 = sdiv i19 %r_V_8_cast, %tmp_2_tr
+
+ST_24: tmp_4 (106)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:38
+_ifconv:90  %tmp_4 = zext i16 %Wout_V to i32
+
+ST_24: tmp_25 (107)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:39
+_ifconv:91  %tmp_25 = trunc i19 %tmp_24 to i16
+
+ST_24: tmp_7 (108)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:41
+_ifconv:92  %tmp_7 = add i16 1, %tmp_25
+
+ST_24: tmp_9 (109)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:49
+_ifconv:93  %tmp_9 = zext i8 %p_2 to i16
+
+ST_24: tmp_s (110)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:50
+_ifconv:94  %tmp_s = zext i8 %p_1 to i16
+
+ST_24: tmp_27 (111)  [1/1] 0.00ns
+_ifconv:95  %tmp_27 = zext i16 %CHout_V_read to i32
+
+ST_24: tmp_12 (112)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:49
+_ifconv:96  %tmp_12 = zext i8 %Sy_V_read to i16
+
+ST_24: tmp_16 (113)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:50
+_ifconv:97  %tmp_16 = zext i8 %Sx_V_read to i16
+
+ST_24: tmp_20 (114)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:51
+_ifconv:98  %tmp_20 = zext i16 %Win_V_read to i32
+
+ST_24: rhs_V_1 (115)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:60
+_ifconv:99  %rhs_V_1 = zext i16 %CHin_V_read to i32
+
+ST_24: tmp_21_cast9 (116)  [1/1] 0.00ns
+_ifconv:100  %tmp_21_cast9 = zext i8 %Kx_V_read to i16
+
+ST_24: StgValue_219 (117)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:41
+_ifconv:101  br label %.loopexit
+
+
+ <State 25>: 2.44ns
+ST_25: i_op_assign_s (119)  [1/1] 0.00ns
+.loopexit:0  %i_op_assign_s = phi i16 [ 0, %_ifconv ], [ %cout, %.loopexit.loopexit ]
+
+ST_25: i_op_assign_14_cast8 (120)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:41
+.loopexit:1  %i_op_assign_14_cast8 = zext i16 %i_op_assign_s to i32
+
+ST_25: i_op_assign_14_cast8_1 (121)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:41
+.loopexit:2  %i_op_assign_14_cast8_1 = zext i16 %i_op_assign_s to i31
+
+ST_25: exitcond5 (122)  [1/1] 2.28ns  loc: conv_core/conv_core.cpp:41
+.loopexit:3  %exitcond5 = icmp eq i16 %i_op_assign_s, %CHout_V_read
+
+ST_25: empty (123)  [1/1] 0.00ns
+.loopexit:4  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 65535, i64 0)
+
+ST_25: cout (124)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:41
+.loopexit:5  %cout = add i16 %i_op_assign_s, 1
+
+ST_25: StgValue_226 (125)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:41
+.loopexit:6  br i1 %exitcond5, label %4, label %.preheader1153.preheader
+
+ST_25: bias6_sum (127)  [1/1] 2.44ns  loc: conv_core/conv_core.cpp:66
+.preheader1153.preheader:0  %bias6_sum = add i31 %tmp_10_cast, %i_op_assign_14_cast8_1
+
+ST_25: bias6_sum_cast (128)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:66
+.preheader1153.preheader:1  %bias6_sum_cast = zext i31 %bias6_sum to i32
+
+ST_25: gmem_addr (129)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:66
+.preheader1153.preheader:2  %gmem_addr = getelementptr inbounds float* %gmem, i32 %bias6_sum_cast
+
+ST_25: StgValue_230 (130)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:42
+.preheader1153.preheader:3  br label %.preheader1153
+
+ST_25: StgValue_231 (259)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:72
+:0  ret void
+
+
+ <State 26>: 6.38ns
+ST_26: i_op_assign_1 (132)  [1/1] 0.00ns
+.preheader1153:0  %i_op_assign_1 = phi i16 [ 0, %.preheader1153.preheader ], [ %i, %.preheader1153.loopexit ]
+
+ST_26: phi_mul1 (133)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:49
+.preheader1153:1  %phi_mul1 = phi i16 [ 0, %.preheader1153.preheader ], [ %next_mul1, %.preheader1153.loopexit ]
+
+ST_26: next_mul1 (134)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:49
+.preheader1153:2  %next_mul1 = add i16 %phi_mul1, %tmp_12
+
+ST_26: i_op_assign_10_cast7 (135)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:42
+.preheader1153:3  %i_op_assign_10_cast7 = zext i16 %i_op_assign_1 to i32
+
+ST_26: exitcond1 (136)  [1/1] 2.28ns  loc: conv_core/conv_core.cpp:42
+.preheader1153:4  %exitcond1 = icmp eq i16 %i_op_assign_1, %tmp_7
+
+ST_26: empty_18 (137)  [1/1] 0.00ns
+.preheader1153:5  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 65535, i64 0)
+
+ST_26: i (138)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:42
+.preheader1153:6  %i = add i16 %i_op_assign_1, 1
+
+ST_26: StgValue_239 (139)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:42
+.preheader1153:7  br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader1152.preheader
+
+ST_26: tmp_14 (141)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:49
+.preheader1152.preheader:0  %tmp_14 = sub i16 %phi_mul1, %tmp_9
+
+ST_26: p_3 (142)  [1/1] 6.38ns  loc: conv_core/conv_core.cpp:70
+.preheader1152.preheader:1  %p_3 = mul i32 %i_op_assign_10_cast7, %tmp_4
+
+ST_26: StgValue_242 (143)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:43
+.preheader1152.preheader:2  br label %.preheader1152
+
+ST_26: StgValue_243 (257)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 27>: 2.28ns
+ST_27: i_op_assign_2 (145)  [1/1] 0.00ns
+.preheader1152:0  %i_op_assign_2 = phi i16 [ %j, %3 ], [ 0, %.preheader1152.preheader ]
+
+ST_27: phi_mul2 (146)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:50
+.preheader1152:1  %phi_mul2 = phi i16 [ %next_mul2, %3 ], [ 0, %.preheader1152.preheader ]
+
+ST_27: next_mul2 (147)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:50
+.preheader1152:2  %next_mul2 = add i16 %phi_mul2, %tmp_16
+
+ST_27: i_op_assign_12_cast6 (148)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:43
+.preheader1152:3  %i_op_assign_12_cast6 = zext i16 %i_op_assign_2 to i32
+
+ST_27: exitcond (149)  [1/1] 2.28ns  loc: conv_core/conv_core.cpp:43
+.preheader1152:4  %exitcond = icmp eq i16 %i_op_assign_2, %Wout_V
+
+ST_27: empty_19 (150)  [1/1] 0.00ns
+.preheader1152:5  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 65535, i64 0)
+
+ST_27: j (151)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:43
+.preheader1152:6  %j = add i16 %i_op_assign_2, 1
+
+ST_27: StgValue_251 (152)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:43
+.preheader1152:7  br i1 %exitcond, label %.preheader1153.loopexit, label %.preheader1151.preheader
+
+ST_27: tmp_18 (154)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:50
+.preheader1151.preheader:0  %tmp_18 = sub i16 %phi_mul2, %tmp_s
+
+ST_27: StgValue_253 (155)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:46
+.preheader1151.preheader:1  br label %.preheader1151
+
+ST_27: StgValue_254 (255)  [1/1] 0.00ns
+.preheader1153.loopexit:0  br label %.preheader1153
+
+
+ <State 28>: 8.75ns
+ST_28: sum (157)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:61
+.preheader1151:0  %sum = phi float [ 0.000000e+00, %.preheader1151.preheader ], [ %sum_1, %.preheader1151.loopexit ]
+
+ST_28: i_op_assign_3 (158)  [1/1] 0.00ns
+.preheader1151:1  %i_op_assign_3 = phi i8 [ 0, %.preheader1151.preheader ], [ %ii, %.preheader1151.loopexit ]
+
+ST_28: phi_mul (159)  [1/1] 0.00ns
+.preheader1151:2  %phi_mul = phi i16 [ 0, %.preheader1151.preheader ], [ %next_mul, %.preheader1151.loopexit ]
+
+ST_28: next_mul (160)  [1/1] 1.96ns
+.preheader1151:3  %next_mul = add i16 %phi_mul, %tmp_21_cast9
+
+ST_28: i_op_assign_11_cast5 (161)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:46
+.preheader1151:4  %i_op_assign_11_cast5 = zext i8 %i_op_assign_3 to i16
+
+ST_28: exitcond2 (162)  [1/1] 2.00ns  loc: conv_core/conv_core.cpp:46
+.preheader1151:5  %exitcond2 = icmp eq i8 %i_op_assign_3, %Ky_V_read
+
+ST_28: empty_20 (163)  [1/1] 0.00ns
+.preheader1151:6  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 255, i64 0)
+
+ST_28: ii (164)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:46
+.preheader1151:7  %ii = add i8 %i_op_assign_3, 1
+
+ST_28: StgValue_263 (165)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:46
+.preheader1151:8  br i1 %exitcond2, label %3, label %.preheader1150.preheader
+
+ST_28: h_V (167)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:49
+.preheader1150.preheader:0  %h_V = add i16 %i_op_assign_11_cast5, %tmp_14
+
+ST_28: lhs_V (168)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:51
+.preheader1150.preheader:1  %lhs_V = sext i16 %h_V to i32
+
+ST_28: lhs_V_cast (169)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:60
+.preheader1150.preheader:2  %lhs_V_cast = sext i16 %h_V to i17
+
+ST_28: tmp_26 (170)  [1/1] 6.38ns  loc: conv_core/conv_core.cpp:60
+.preheader1150.preheader:3  %tmp_26 = mul i32 %tmp_20, %lhs_V
+
+ST_28: slt (171)  [1/1] 2.28ns  loc: conv_core/conv_core.cpp:51
+.preheader1150.preheader:4  %slt = icmp slt i17 %lhs_V_cast, %lhs_V_4_cast
+
+ST_28: rev (172)  [1/1] 1.37ns  loc: conv_core/conv_core.cpp:51
+.preheader1150.preheader:5  %rev = xor i1 %slt, true
+
+ST_28: StgValue_270 (173)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:47
+.preheader1150.preheader:6  br label %.preheader1150
+
+ST_28: gmem_load_req (232)  [7/7] 8.75ns  loc: conv_core/conv_core.cpp:66
+:0  %gmem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr, i32 1)
+
+ST_28: tmp1 (245)  [1/1] 2.44ns  loc: conv_core/conv_core.cpp:70
+:13  %tmp1 = add i32 %p_3, %i_op_assign_12_cast6
+
+ST_28: tmp2 (246)  [3/3] 6.08ns  loc: conv_core/conv_core.cpp:70
+:14  %tmp2 = mul i32 %tmp1, %tmp_27
+
+
+ <State 29>: 5.81ns
+ST_29: sum_1 (175)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:61
+.preheader1150:0  %sum_1 = phi float [ %sum, %.preheader1150.preheader ], [ %sum_1_be, %.preheader1150.backedge ]
+
+ST_29: i_op_assign_5 (176)  [1/1] 0.00ns
+.preheader1150:1  %i_op_assign_5 = phi i8 [ 0, %.preheader1150.preheader ], [ %jj, %.preheader1150.backedge ]
+
+ST_29: i_op_assign_13_cast3 (177)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:47
+.preheader1150:2  %i_op_assign_13_cast3 = zext i8 %i_op_assign_5 to i16
+
+ST_29: exitcond3 (178)  [1/1] 2.00ns  loc: conv_core/conv_core.cpp:47
+.preheader1150:3  %exitcond3 = icmp eq i8 %i_op_assign_5, %Kx_V_read
+
+ST_29: empty_21 (179)  [1/1] 0.00ns
+.preheader1150:4  %empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 255, i64 0)
+
+ST_29: jj (180)  [1/1] 1.72ns  loc: conv_core/conv_core.cpp:47
+.preheader1150:5  %jj = add i8 %i_op_assign_5, 1
+
+ST_29: StgValue_280 (181)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:47
+.preheader1150:6  br i1 %exitcond3, label %.preheader1151.loopexit, label %0
+
+ST_29: w_V (183)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:50
+:0  %w_V = add i16 %i_op_assign_13_cast3, %tmp_18
+
+ST_29: tmp_30 (184)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:51 (grouped into LUT with out node brmerge)
+:1  %tmp_30 = or i16 %w_V, %h_V
+
+ST_29: tmp_36 (185)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:51 (grouped into LUT with out node brmerge)
+:2  %tmp_36 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %tmp_30, i32 15)
+
+ST_29: brmerge (186)  [1/1] 1.37ns  loc: conv_core/conv_core.cpp:51 (out node of the LUT)
+:3  %brmerge = or i1 %tmp_36, %rev
+
+ST_29: StgValue_285 (187)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:51
+:4  br i1 %brmerge, label %.preheader1150.backedge, label %1
+
+ST_29: lhs_V_1 (189)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:51
+:0  %lhs_V_1 = sext i16 %w_V to i32
+
+ST_29: lhs_V_1_cast (190)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:51
+:1  %lhs_V_1_cast = sext i16 %w_V to i17
+
+ST_29: tmp_31 (191)  [1/1] 2.28ns  loc: conv_core/conv_core.cpp:51
+:2  %tmp_31 = icmp slt i17 %lhs_V_1_cast, %lhs_V_2_cast
+
+ST_29: StgValue_289 (192)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:51
+:3  br i1 %tmp_31, label %.preheader.preheader, label %.preheader1150.backedge
+
+ST_29: tmp (194)  [1/1] 2.44ns  loc: conv_core/conv_core.cpp:60
+.preheader.preheader:0  %tmp = add i32 %tmp_26, %lhs_V_1
+
+ST_29: tmp4 (196)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:47
+.preheader.preheader:2  %tmp4 = add i16 %i_op_assign_13_cast3, %phi_mul
+
+ST_29: StgValue_292 (230)  [1/1] 0.00ns
+.preheader1151.loopexit:0  br label %.preheader1151
+
+
+ <State 30>: 6.38ns
+ST_30: tmp3 (195)  [3/3] 6.08ns  loc: conv_core/conv_core.cpp:60
+.preheader.preheader:1  %tmp3 = mul i32 %tmp, %rhs_V_1
+
+ST_30: tmp4_cast (197)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:47
+.preheader.preheader:3  %tmp4_cast = zext i16 %tmp4 to i32
+
+ST_30: tmp5 (198)  [1/1] 6.38ns  loc: conv_core/conv_core.cpp:47
+.preheader.preheader:4  %tmp5 = mul i32 %tmp4_cast, %rhs_V_1
+
+
+ <State 31>: 6.08ns
+ST_31: tmp3 (195)  [2/3] 6.08ns  loc: conv_core/conv_core.cpp:60
+.preheader.preheader:1  %tmp3 = mul i32 %tmp, %rhs_V_1
+
+
+ <State 32>: 6.08ns
+ST_32: tmp3 (195)  [1/3] 6.08ns  loc: conv_core/conv_core.cpp:60
+.preheader.preheader:1  %tmp3 = mul i32 %tmp, %rhs_V_1
+
+ST_32: StgValue_298 (199)  [1/1] 1.57ns  loc: conv_core/conv_core.cpp:53
+.preheader.preheader:5  br label %.preheader
+
+
+ <State 33>: 8.52ns
+ST_33: sum_2 (201)  [1/1] 0.00ns
+.preheader:0  %sum_2 = phi float [ %sum_4, %2 ], [ %sum_1, %.preheader.preheader ]
+
+ST_33: i_op_assign (202)  [1/1] 0.00ns
+.preheader:1  %i_op_assign = phi i16 [ %cin, %2 ], [ 0, %.preheader.preheader ]
+
+ST_33: i_op_assign_cast1 (203)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:53
+.preheader:2  %i_op_assign_cast1 = zext i16 %i_op_assign to i32
+
+ST_33: exitcond4 (204)  [1/1] 2.28ns  loc: conv_core/conv_core.cpp:53
+.preheader:3  %exitcond4 = icmp eq i16 %i_op_assign, %CHin_V_read
+
+ST_33: empty_22 (205)  [1/1] 0.00ns
+.preheader:4  %empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 65535, i64 0)
+
+ST_33: cin (206)  [1/1] 1.96ns  loc: conv_core/conv_core.cpp:53
+.preheader:5  %cin = add i16 %i_op_assign, 1
+
+ST_33: StgValue_305 (207)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:53
+.preheader:6  br i1 %exitcond4, label %.preheader1150.loopexit, label %2
+
+ST_33: tmp_32 (209)  [1/1] 1.97ns  loc: conv_core/conv_core.cpp:60
+:0  %tmp_32 = add i32 %tmp3, %i_op_assign_cast1
+
+ST_33: feature_in2_sum9 (210)  [1/1] 1.97ns  loc: conv_core/conv_core.cpp:60
+:1  %feature_in2_sum9 = add i32 %tmp_8, %tmp_32
+
+ST_33: tmp6 (214)  [1/1] 2.44ns  loc: conv_core/conv_core.cpp:47
+:5  %tmp6 = add i32 %tmp5, %i_op_assign_cast1
+
+ST_33: tmp7 (215)  [3/3] 6.08ns  loc: conv_core/conv_core.cpp:47
+:6  %tmp7 = mul i32 %tmp6, %tmp_27
+
+ST_33: StgValue_310 (225)  [1/1] 1.57ns
+.preheader1150.loopexit:0  br label %.preheader1150.backedge
+
+
+ <State 34>: 6.08ns
+ST_34: tmp7 (215)  [2/3] 6.08ns  loc: conv_core/conv_core.cpp:47
+:6  %tmp7 = mul i32 %tmp6, %tmp_27
+
+
+ <State 35>: 6.08ns
+ST_35: tmp7 (215)  [1/3] 6.08ns  loc: conv_core/conv_core.cpp:47
+:6  %tmp7 = mul i32 %tmp6, %tmp_27
+
+
+ <State 36>: 8.75ns
+ST_36: gmem_addr_2 (211)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:60
+:2  %gmem_addr_2 = getelementptr inbounds float* %gmem, i32 %feature_in2_sum9
+
+ST_36: gmem_load_1_req (212)  [7/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:3  %gmem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_2, i32 1)
+
+ST_36: tmp_34 (216)  [1/1] 1.97ns  loc: conv_core/conv_core.cpp:60
+:7  %tmp_34 = add i32 %tmp7, %i_op_assign_14_cast8
+
+ST_36: W4_sum (217)  [1/1] 1.97ns  loc: conv_core/conv_core.cpp:60
+:8  %W4_sum = add i32 %tmp_5, %tmp_34
+
+
+ <State 37>: 8.75ns
+ST_37: gmem_load_1_req (212)  [6/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:3  %gmem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_2, i32 1)
+
+ST_37: gmem_addr_3 (218)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:60
+:9  %gmem_addr_3 = getelementptr inbounds float* %gmem, i32 %W4_sum
+
+ST_37: gmem_load_2_req (219)  [7/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:10  %gmem_load_2_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_3, i32 1)
+
+
+ <State 38>: 8.75ns
+ST_38: gmem_load_1_req (212)  [5/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:3  %gmem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_2, i32 1)
+
+ST_38: gmem_load_2_req (219)  [6/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:10  %gmem_load_2_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_3, i32 1)
+
+
+ <State 39>: 8.75ns
+ST_39: gmem_load_1_req (212)  [4/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:3  %gmem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_2, i32 1)
+
+ST_39: gmem_load_2_req (219)  [5/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:10  %gmem_load_2_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_3, i32 1)
+
+
+ <State 40>: 8.75ns
+ST_40: gmem_load_1_req (212)  [3/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:3  %gmem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_2, i32 1)
+
+ST_40: gmem_load_2_req (219)  [4/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:10  %gmem_load_2_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_3, i32 1)
+
+
+ <State 41>: 8.75ns
+ST_41: gmem_load_1_req (212)  [2/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:3  %gmem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_2, i32 1)
+
+ST_41: gmem_load_2_req (219)  [3/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:10  %gmem_load_2_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_3, i32 1)
+
+
+ <State 42>: 8.75ns
+ST_42: gmem_load_1_req (212)  [1/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:3  %gmem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_2, i32 1)
+
+ST_42: gmem_load_2_req (219)  [2/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:10  %gmem_load_2_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_3, i32 1)
+
+
+ <State 43>: 8.75ns
+ST_43: gmem_addr_2_read (213)  [1/1] 8.75ns  loc: conv_core/conv_core.cpp:60
+:4  %gmem_addr_2_read = call float @_ssdm_op_Read.m_axi.floatP(float* %gmem_addr_2)
+
+ST_43: gmem_load_2_req (219)  [1/7] 8.75ns  loc: conv_core/conv_core.cpp:60
+:10  %gmem_load_2_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr_3, i32 1)
+
+
+ <State 44>: 8.75ns
+ST_44: gmem_addr_3_read (220)  [1/1] 8.75ns  loc: conv_core/conv_core.cpp:60
+:11  %gmem_addr_3_read = call float @_ssdm_op_Read.m_axi.floatP(float* %gmem_addr_3)
+
+
+ <State 45>: 5.70ns
+ST_45: tp (221)  [4/4] 5.70ns  loc: conv_core/conv_core.cpp:60
+:12  %tp = fmul float %gmem_addr_2_read, %gmem_addr_3_read
+
+
+ <State 46>: 5.70ns
+ST_46: tp (221)  [3/4] 5.70ns  loc: conv_core/conv_core.cpp:60
+:12  %tp = fmul float %gmem_addr_2_read, %gmem_addr_3_read
+
+
+ <State 47>: 5.70ns
+ST_47: tp (221)  [2/4] 5.70ns  loc: conv_core/conv_core.cpp:60
+:12  %tp = fmul float %gmem_addr_2_read, %gmem_addr_3_read
+
+
+ <State 48>: 5.70ns
+ST_48: tp (221)  [1/4] 5.70ns  loc: conv_core/conv_core.cpp:60
+:12  %tp = fmul float %gmem_addr_2_read, %gmem_addr_3_read
+
+
+ <State 49>: 7.26ns
+ST_49: sum_4 (222)  [5/5] 7.26ns  loc: conv_core/conv_core.cpp:61
+:13  %sum_4 = fadd float %sum_2, %tp
+
+
+ <State 50>: 7.26ns
+ST_50: sum_4 (222)  [4/5] 7.26ns  loc: conv_core/conv_core.cpp:61
+:13  %sum_4 = fadd float %sum_2, %tp
+
+
+ <State 51>: 7.26ns
+ST_51: sum_4 (222)  [3/5] 7.26ns  loc: conv_core/conv_core.cpp:61
+:13  %sum_4 = fadd float %sum_2, %tp
+
+
+ <State 52>: 7.26ns
+ST_52: sum_4 (222)  [2/5] 7.26ns  loc: conv_core/conv_core.cpp:61
+:13  %sum_4 = fadd float %sum_2, %tp
+
+
+ <State 53>: 7.26ns
+ST_53: sum_4 (222)  [1/5] 7.26ns  loc: conv_core/conv_core.cpp:61
+:13  %sum_4 = fadd float %sum_2, %tp
+
+ST_53: StgValue_342 (223)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:53
+:14  br label %.preheader
+
+
+ <State 54>: 0.00ns
+ST_54: sum_1_be (227)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:61
+.preheader1150.backedge:0  %sum_1_be = phi float [ %sum_1, %0 ], [ %sum_1, %1 ], [ %sum_2, %.preheader1150.loopexit ]
+
+ST_54: StgValue_344 (228)  [1/1] 0.00ns
+.preheader1150.backedge:1  br label %.preheader1150
+
+
+ <State 55>: 8.75ns
+ST_55: gmem_load_req (232)  [6/7] 8.75ns  loc: conv_core/conv_core.cpp:66
+:0  %gmem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr, i32 1)
+
+ST_55: tmp2 (246)  [2/3] 6.08ns  loc: conv_core/conv_core.cpp:70
+:14  %tmp2 = mul i32 %tmp1, %tmp_27
+
+
+ <State 56>: 8.75ns
+ST_56: gmem_load_req (232)  [5/7] 8.75ns  loc: conv_core/conv_core.cpp:66
+:0  %gmem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr, i32 1)
+
+ST_56: tmp2 (246)  [1/3] 6.08ns  loc: conv_core/conv_core.cpp:70
+:14  %tmp2 = mul i32 %tmp1, %tmp_27
+
+
+ <State 57>: 8.75ns
+ST_57: gmem_load_req (232)  [4/7] 8.75ns  loc: conv_core/conv_core.cpp:66
+:0  %gmem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr, i32 1)
+
+ST_57: tmp_23 (247)  [1/1] 1.97ns  loc: conv_core/conv_core.cpp:70
+:15  %tmp_23 = add i32 %tmp2, %i_op_assign_14_cast8
+
+ST_57: feature_out8_sum (248)  [1/1] 1.97ns  loc: conv_core/conv_core.cpp:70
+:16  %feature_out8_sum = add i32 %tmp_23, %tmp_2
+
+
+ <State 58>: 8.75ns
+ST_58: gmem_load_req (232)  [3/7] 8.75ns  loc: conv_core/conv_core.cpp:66
+:0  %gmem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr, i32 1)
+
+
+ <State 59>: 8.75ns
+ST_59: gmem_load_req (232)  [2/7] 8.75ns  loc: conv_core/conv_core.cpp:66
+:0  %gmem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr, i32 1)
+
+
+ <State 60>: 8.75ns
+ST_60: gmem_load_req (232)  [1/7] 8.75ns  loc: conv_core/conv_core.cpp:66
+:0  %gmem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %gmem_addr, i32 1)
+
+
+ <State 61>: 8.75ns
+ST_61: gmem_addr_read (233)  [1/1] 8.75ns  loc: conv_core/conv_core.cpp:66
+:1  %gmem_addr_read = call float @_ssdm_op_Read.m_axi.floatP(float* %gmem_addr)
+
+
+ <State 62>: 7.26ns
+ST_62: sum_3 (234)  [5/5] 7.26ns  loc: conv_core/conv_core.cpp:66
+:2  %sum_3 = fadd float %sum, %gmem_addr_read
+
+
+ <State 63>: 7.26ns
+ST_63: sum_3 (234)  [4/5] 7.26ns  loc: conv_core/conv_core.cpp:66
+:2  %sum_3 = fadd float %sum, %gmem_addr_read
+
+
+ <State 64>: 7.26ns
+ST_64: sum_3 (234)  [3/5] 7.26ns  loc: conv_core/conv_core.cpp:66
+:2  %sum_3 = fadd float %sum, %gmem_addr_read
+
+
+ <State 65>: 7.26ns
+ST_65: sum_3 (234)  [2/5] 7.26ns  loc: conv_core/conv_core.cpp:66
+:2  %sum_3 = fadd float %sum, %gmem_addr_read
+
+
+ <State 66>: 7.26ns
+ST_66: sum_3 (234)  [1/5] 7.26ns  loc: conv_core/conv_core.cpp:66
+:2  %sum_3 = fadd float %sum, %gmem_addr_read
+
+
+ <State 67>: 8.75ns
+ST_67: sum_4_to_int (235)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:66
+:3  %sum_4_to_int = bitcast float %sum_3 to i32
+
+ST_67: tmp_28 (236)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:66
+:4  %tmp_28 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %sum_4_to_int, i32 23, i32 30)
+
+ST_67: tmp_29 (237)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:66
+:5  %tmp_29 = trunc i32 %sum_4_to_int to i23
+
+ST_67: notlhs (238)  [1/1] 2.00ns  loc: conv_core/conv_core.cpp:66
+:6  %notlhs = icmp ne i8 %tmp_28, -1
+
+ST_67: notrhs (239)  [1/1] 2.39ns  loc: conv_core/conv_core.cpp:66
+:7  %notrhs = icmp eq i23 %tmp_29, 0
+
+ST_67: tmp_33 (240)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:66 (grouped into LUT with out node p_s)
+:8  %tmp_33 = or i1 %notrhs, %notlhs
+
+ST_67: tmp_35 (241)  [1/1] 6.79ns  loc: conv_core/conv_core.cpp:67
+:9  %tmp_35 = fcmp olt float %sum_3, 0.000000e+00
+
+ST_67: rhs_V (242)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:67 (grouped into LUT with out node p_s)
+:10  %rhs_V = and i1 %tmp_33, %tmp_35
+
+ST_67: r_V (243)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:67 (grouped into LUT with out node p_s)
+:11  %r_V = and i1 %rhs_V, %relu_en_V_read
+
+ST_67: p_s (244)  [1/1] 1.37ns  loc: conv_core/conv_core.cpp:67 (out node of the LUT)
+:12  %p_s = select i1 %r_V, float 0.000000e+00, float %sum_3
+
+ST_67: gmem_addr_1 (249)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:70
+:17  %gmem_addr_1 = getelementptr inbounds float* %gmem, i32 %feature_out8_sum
+
+ST_67: gmem_addr_1_req (250)  [1/1] 8.75ns  loc: conv_core/conv_core.cpp:70
+:18  %gmem_addr_1_req = call i1 @_ssdm_op_WriteReq.m_axi.floatP(float* %gmem_addr_1, i32 1)
+
+
+ <State 68>: 8.75ns
+ST_68: StgValue_373 (251)  [1/1] 8.75ns  loc: conv_core/conv_core.cpp:70
+:19  call void @_ssdm_op_Write.m_axi.floatP(float* %gmem_addr_1, float %p_s, i4 -1)
+
+
+ <State 69>: 8.75ns
+ST_69: gmem_addr_1_resp (252)  [5/5] 8.75ns  loc: conv_core/conv_core.cpp:70
+:20  %gmem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %gmem_addr_1)
+
+
+ <State 70>: 8.75ns
+ST_70: gmem_addr_1_resp (252)  [4/5] 8.75ns  loc: conv_core/conv_core.cpp:70
+:20  %gmem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %gmem_addr_1)
+
+
+ <State 71>: 8.75ns
+ST_71: gmem_addr_1_resp (252)  [3/5] 8.75ns  loc: conv_core/conv_core.cpp:70
+:20  %gmem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %gmem_addr_1)
+
+
+ <State 72>: 8.75ns
+ST_72: gmem_addr_1_resp (252)  [2/5] 8.75ns  loc: conv_core/conv_core.cpp:70
+:20  %gmem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %gmem_addr_1)
+
+
+ <State 73>: 8.75ns
+ST_73: gmem_addr_1_resp (252)  [1/5] 8.75ns  loc: conv_core/conv_core.cpp:70
+:20  %gmem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %gmem_addr_1)
+
+ST_73: StgValue_379 (253)  [1/1] 0.00ns  loc: conv_core/conv_core.cpp:43
+:21  br label %.preheader1152
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 7.77ns
+The critical path consists of the following:
+	s_axi read on port 'Ky_V' [24]  (1 ns)
+	'sub' operation ('p_neg', conv_core/conv_core.cpp:35) [77]  (1.72 ns)
+	'sub' operation ('tmp_19', conv_core/conv_core.cpp:35) [80]  (1.72 ns)
+	'select' operation ('pad_y.V', conv_core/conv_core.cpp:35) [81]  (0 ns)
+	'select' operation ('p_2', conv_core/conv_core.cpp:35) [83]  (1.37 ns)
+	'add' operation ('r_V_7', conv_core/conv_core.cpp:39) [99]  (1.96 ns)
+
+ <State 2>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('r_V_4', conv_core/conv_core.cpp:38) [90]  (2.08 ns)
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 3>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 4>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 5>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 6>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 7>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 8>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 9>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 10>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 11>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 12>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 13>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 14>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 15>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 16>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 17>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 18>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 19>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 20>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 21>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 22>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 23>: 4.8ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+
+ <State 24>: 6.76ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_21', conv_core/conv_core.cpp:38) [93]  (4.8 ns)
+	'add' operation ('Wout.V', conv_core/conv_core.cpp:38) [95]  (1.96 ns)
+
+ <State 25>: 2.44ns
+The critical path consists of the following:
+	'phi' operation ('cout') with incoming values : ('cout', conv_core/conv_core.cpp:41) [119]  (0 ns)
+	'add' operation ('bias6_sum', conv_core/conv_core.cpp:66) [127]  (2.44 ns)
+
+ <State 26>: 6.38ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', conv_core/conv_core.cpp:42) [132]  (0 ns)
+	'mul' operation ('p_3', conv_core/conv_core.cpp:70) [142]  (6.38 ns)
+
+ <State 27>: 2.28ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', conv_core/conv_core.cpp:43) [145]  (0 ns)
+	'icmp' operation ('exitcond', conv_core/conv_core.cpp:43) [149]  (2.28 ns)
+
+ <State 28>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:66) [232]  (8.75 ns)
+
+ <State 29>: 5.81ns
+The critical path consists of the following:
+	'phi' operation ('jj') with incoming values : ('jj', conv_core/conv_core.cpp:47) [176]  (0 ns)
+	'add' operation ('w.V', conv_core/conv_core.cpp:50) [183]  (1.96 ns)
+	'icmp' operation ('tmp_31', conv_core/conv_core.cpp:51) [191]  (2.28 ns)
+	multiplexor before 'phi' operation ('sum_1_be', conv_core/conv_core.cpp:61) with incoming values : ('sum', conv_core/conv_core.cpp:61) [227]  (1.57 ns)
+
+ <State 30>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp5', conv_core/conv_core.cpp:47) [198]  (6.38 ns)
+
+ <State 31>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp3', conv_core/conv_core.cpp:60) [195]  (6.08 ns)
+
+ <State 32>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp3', conv_core/conv_core.cpp:60) [195]  (6.08 ns)
+
+ <State 33>: 8.52ns
+The critical path consists of the following:
+	'phi' operation ('cin') with incoming values : ('cin', conv_core/conv_core.cpp:53) [202]  (0 ns)
+	'add' operation ('tmp6', conv_core/conv_core.cpp:47) [214]  (2.44 ns)
+	'mul' operation ('tmp7', conv_core/conv_core.cpp:47) [215]  (6.08 ns)
+
+ <State 34>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp7', conv_core/conv_core.cpp:47) [215]  (6.08 ns)
+
+ <State 35>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp7', conv_core/conv_core.cpp:47) [215]  (6.08 ns)
+
+ <State 36>: 8.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr_2', conv_core/conv_core.cpp:60) [211]  (0 ns)
+	bus request on port 'gmem' (conv_core/conv_core.cpp:60) [212]  (8.75 ns)
+
+ <State 37>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:60) [212]  (8.75 ns)
+
+ <State 38>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:60) [212]  (8.75 ns)
+
+ <State 39>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:60) [212]  (8.75 ns)
+
+ <State 40>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:60) [212]  (8.75 ns)
+
+ <State 41>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:60) [212]  (8.75 ns)
+
+ <State 42>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:60) [212]  (8.75 ns)
+
+ <State 43>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'gmem' (conv_core/conv_core.cpp:60) [213]  (8.75 ns)
+
+ <State 44>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'gmem' (conv_core/conv_core.cpp:60) [220]  (8.75 ns)
+
+ <State 45>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tp', conv_core/conv_core.cpp:60) [221]  (5.7 ns)
+
+ <State 46>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tp', conv_core/conv_core.cpp:60) [221]  (5.7 ns)
+
+ <State 47>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tp', conv_core/conv_core.cpp:60) [221]  (5.7 ns)
+
+ <State 48>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tp', conv_core/conv_core.cpp:60) [221]  (5.7 ns)
+
+ <State 49>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:61) [222]  (7.26 ns)
+
+ <State 50>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:61) [222]  (7.26 ns)
+
+ <State 51>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:61) [222]  (7.26 ns)
+
+ <State 52>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:61) [222]  (7.26 ns)
+
+ <State 53>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:61) [222]  (7.26 ns)
+
+ <State 54>: 0ns
+The critical path consists of the following:
+
+ <State 55>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:66) [232]  (8.75 ns)
+
+ <State 56>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:66) [232]  (8.75 ns)
+
+ <State 57>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:66) [232]  (8.75 ns)
+
+ <State 58>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:66) [232]  (8.75 ns)
+
+ <State 59>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:66) [232]  (8.75 ns)
+
+ <State 60>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (conv_core/conv_core.cpp:66) [232]  (8.75 ns)
+
+ <State 61>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'gmem' (conv_core/conv_core.cpp:66) [233]  (8.75 ns)
+
+ <State 62>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:66) [234]  (7.26 ns)
+
+ <State 63>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:66) [234]  (7.26 ns)
+
+ <State 64>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:66) [234]  (7.26 ns)
+
+ <State 65>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:66) [234]  (7.26 ns)
+
+ <State 66>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', conv_core/conv_core.cpp:66) [234]  (7.26 ns)
+
+ <State 67>: 8.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr_1', conv_core/conv_core.cpp:70) [249]  (0 ns)
+	bus request on port 'gmem' (conv_core/conv_core.cpp:70) [250]  (8.75 ns)
+
+ <State 68>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'gmem' (conv_core/conv_core.cpp:70) [251]  (8.75 ns)
+
+ <State 69>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (conv_core/conv_core.cpp:70) [252]  (8.75 ns)
+
+ <State 70>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (conv_core/conv_core.cpp:70) [252]  (8.75 ns)
+
+ <State 71>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (conv_core/conv_core.cpp:70) [252]  (8.75 ns)
+
+ <State 72>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (conv_core/conv_core.cpp:70) [252]  (8.75 ns)
+
+ <State 73>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (conv_core/conv_core.cpp:70) [252]  (8.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

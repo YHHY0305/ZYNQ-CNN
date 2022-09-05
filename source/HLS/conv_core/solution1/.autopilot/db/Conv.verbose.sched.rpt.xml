@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Conv'" level="0">
+<item name = "Date">Wed Jun 16 10:03:37 2021
+</item>
+<item name = "Version">2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)</item>
+<item name = "Project">conv_core</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z010clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.75, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">24, ?, 25, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">0, ?, 2 ~ ?, -, -, 0 ~ 65535, no</column>
+<column name=" + Loop 1.1">0, ?, 2 ~ 5864731839422462, -, -, 0 ~ 65535, no</column>
+<column name="  ++ Loop 1.1.1">0, 5864731839422460, 21 ~ 89490071556, -, -, 0 ~ 65535, no</column>
+<column name="   +++ Loop 1.1.1.1">0, 89490071535, 2 ~ 350941457, -, -, 0 ~ 255, no</column>
+<column name="    ++++ Loop 1.1.1.1.1">0, 350941455, 2 ~ 1376241, -, -, 0 ~ 255, no</column>
+<column name="     +++++ Loop 1.1.1.1.1.1">0, 1376235, 21, -, -, 0 ~ 65535, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
